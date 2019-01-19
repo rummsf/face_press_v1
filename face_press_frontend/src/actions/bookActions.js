@@ -1,12 +1,14 @@
-export function fetchBooks(books) {
-  return {
-    type: "FETCH_BOOKS",
-    payload: books
+export function fetchBooks() {
+  return dispatch => {
+    dispatch({ type: "FETCH_BOOKS" });
+    return fetch("https://localhost:3005/api/v1/books")
+      .then(resp => resp.json())
+      .then(books => dispatch({ type: "FETCH_BOOKS", payload: books }));
   };
 }
 
-export function selectBook(selectedID) {
-  return { type: "SELECT_BOOK", payload: selectedID };
+export function selectBook(selectedBookId) {
+  return { type: "SELECT_BOOK", payload: selectedBookId };
 }
 
 export function purchaseBook(book) {

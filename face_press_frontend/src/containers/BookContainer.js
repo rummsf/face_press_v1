@@ -20,7 +20,7 @@ class BookContainer extends Component {
           {this.props.activeBook ? (
             <BookDetails book={this.props.activeBook} />
           ) : (
-            <h3>select a book</h3>
+            <h3>View Details</h3>
           )}
         </div>
       </div>
