@@ -1,9 +1,31 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as actions from "../actions";
+import BookList from "../components/BookList";
+import BookDetails from "../components/BookDetails";
+import * as actions from "../actions/bookActions";
 
 class BookContainer extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchBooks();
+  }
+
+  render() {
+    console.log("props: ", this.props);
+    return (
+      <div className="row">
+        <div className="six wide column">
+          <BookList books={this.props.books} />
+        </div>
+        <div className="ten wide column">
+          {this.props.activeBook ? (
+            <BookDetails book={this.props.activeBook} />
+          ) : (
+            <h3>select a book</h3>
+          )}
+        </div>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = state => ({
