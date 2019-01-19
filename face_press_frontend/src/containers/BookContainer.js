@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import * as actions from "../actions";
 
 class BookContainer extends Component {
   componentDidMount() {}
@@ -7,7 +8,7 @@ class BookContainer extends Component {
 
 const mapStateToProps = state => ({
   books: state.books.filter(book =>
-    book.museum.name.toLowerCase().includes(state.filter)
+    book.title.toLowerCase().includes(state.filter)
   ),
   activeBook: state.books.find(book => book.id === state.activeBookId),
   filter: state.filter
