@@ -5,6 +5,7 @@ const booksReducer = (state = [], action) => {
     case "FETCH_BOOKS":
       return [...action.payload];
     case "PURCHASE_BOOK":
+      //decrement book availability
       return state.filter(book => book.id !== action.id);
     default:
       return state;
