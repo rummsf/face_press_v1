@@ -2,7 +2,7 @@
 
 In progress:
 
-E-commerce website for a poetry press built in React, Redux and Rails.
+E-commerce website for a poetry press built in React, Redux and Rails, a rebuild of the existing site: face-press.org.
 
 A user can search by writer name or book title to view further details of each.
 
