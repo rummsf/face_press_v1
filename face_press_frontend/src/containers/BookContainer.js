@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import BookList from "../components/BookList";
-import BookDetails from "../components/BookDetails";
+import BookList from "../components/books/BookList";
+import BookDetails from "../components/books/BookDetails";
 import * as actions from "../actions/bookActions";
 
 class BookContainer extends Component {

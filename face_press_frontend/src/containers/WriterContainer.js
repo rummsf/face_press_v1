@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import WriterList from "../components/writerList";
-import WriterDetails from "../components/writerDetails";
+import WriterList from "../components/writers/WriterList";
+import WriterDetails from "../components/writers/WriterDetails";
 import * as actions from "../actions/writerActions";
 
 class WriterContainer extends Component {
@@ -29,12 +29,12 @@ class WriterContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  writers: state.writers.filter(writer =>
-    writer.title.toLowerCase().includes(state.filter)
-  ),
-  activeWriter: state.writers.find(
-    writer => writer.id === state.activeWriterId
-  ),
+  // writers: state.writers.filter(writer =>
+  //   writer.title.toLowerCase().includes(state.filter)
+  // ),
+  // activeWriter: state.writers.find(
+  //   writer => writer.id === state.activeWriterId
+  // ),
   filter: state.filter
 });
 

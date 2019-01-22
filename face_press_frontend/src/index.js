@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import App from "./App";
 import rootReducer from "./reducers";
-//bulma
+import rootAction from "./actions";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, rootAction, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
