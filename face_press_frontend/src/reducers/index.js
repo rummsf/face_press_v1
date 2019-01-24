@@ -1,4 +1,6 @@
 import { combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
+
 import booksReducer from "./booksReducer";
 import writersReducer from "./writersReducer";
 import usersReducer from "./usersReducer";
@@ -8,7 +10,8 @@ const rootReducer = combineReducers({
   books: booksReducer,
   writers: writersReducer,
   users: usersReducer,
-  filter: filterReducer
+  filter: filterReducer,
+  form: formReducer
 });
 
 export default rootReducer;
