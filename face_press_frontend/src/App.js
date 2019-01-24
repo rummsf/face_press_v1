@@ -5,6 +5,7 @@ import BookContainer from "./containers/BookContainer";
 import WriterContainer from "./containers/WriterContainer";
 import BookList from "./components/books/BookList";
 import WriterList from "./components/writers/WriterList";
+import NewMember from "./components/members/NewMember";
 import Header from "./Header";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" exact component={WriterContainer} />
           <Route path="/books" exact component={BookList} />
           <Route path="/writers" exact component={WriterList} />
+          <Route path="new_member" exact component={NewMember} />
         </div>
       </BrowserRouter>
     </div>
