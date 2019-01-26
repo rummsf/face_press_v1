@@ -1,6 +1,6 @@
 const filterReducer = (state = "", action) => {
   switch (action.type) {
-    case "UPDATE_FILTER":
+    case UPDATE_FILTER:
       return action.payload;
     default:
       return state;
